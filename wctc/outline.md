@@ -10,6 +10,7 @@
   * knowldge/learning fatigue
   * Find something interesting to you, do that..
   * imposter syndrom
+  * Wctc talk. Always something new to learn. Don't get stressed out you have tons of time to learn.
 
 * progression of web apps
 
