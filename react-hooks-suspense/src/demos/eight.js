@@ -1,0 +1,1 @@
+//data fetching with suspense
