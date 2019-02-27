@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>A hike through hooks and suspense in React</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,38 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						## A hike through hooks and suspense in React
+
+
+						Tony Gemoll
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						1
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						2
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						3
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						3
+					</textarea>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +67,9 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				progress: false,
+				slideNumber: true,
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -44,6 +77,38 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				setSlideProgress(Reveal.getIndices().h);
+			} );
+
+			const setSlideProgress = (index) => {
+				setTimeout(() => {
+					let theJoke = '';
+
+					if (index === 0) {
+						theJoke = '0 of 10'
+					}
+					if (index === 1) {
+						theJoke = '1 of 11'
+					}
+					if (index === 2) {
+						theJoke = 'did that just change? 2 of 12'
+					}
+					if (index === 3) {
+						theJoke = 'wait what? 3 of 25'
+					}
+					if (index === 4) {
+						theJoke = 'Not found? 4 of 404'
+					}
+					if (index === 5) {
+						theJoke = 'Not found? 4 of ¯\\_(ツ)_/¯'
+					}
+
+					document.getElementsByClassName('slide-number-a')[0].innerHTML = theJoke;
+
+				}, 1)
+			}
 		</script>
 	</body>
 </html>
