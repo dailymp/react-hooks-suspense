@@ -12,6 +12,7 @@ import DemoFive from "./demos/five";
 import DemoSix from "./demos/six";
 import DemoSeven from "./demos/seven";
 import DemoEight from "./demos/eight";
+import DemoNine from "./demos/nine";
 
 
 const store = createStore(rootReducer);
@@ -31,6 +32,7 @@ class App extends Component {
                     <Link style={{paddingRight: '10px'}} to="/six">Demo Six</Link>
                     <Link style={{paddingRight: '10px'}} to="/seven">Demo Seven</Link>
                     <Link style={{paddingRight: '10px'}} to="/eight">Demo Eight</Link>
+                    <Link style={{paddingRight: '10px'}} to="/nine">Demo Nine</Link>
                 </nav>
                 <Router>
                   <DemoOne path="/one" />
@@ -40,7 +42,8 @@ class App extends Component {
                   <DemoFive path="/five" />
                   <DemoSix path="/six" />
                   <DemoSeven path="/seven" />
-                  <DemoEight path="/eight"/>
+                  <DemoEight path="/eight" />
+                  <DemoNine path="/nine" />
                 </Router>
             </div>
         </Provider>
