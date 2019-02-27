@@ -7,7 +7,7 @@
 		<title>A hike through hooks and suspense in React</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -35,29 +35,165 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						1
+						### Hooks - Released API
+
+<pre>
+	<code data-trim data-noescape>
+import React,
+  {
+	useState,
+	useEffect,
+	useContext,
+	useReducer,
+	useCallback,
+	useMemo,
+	useRef,
+	useImperativeHandle,
+	useLayoutEffect,
+	useDebugValue
+  } from 'react'
+</code>
+</pre>
+						<p style="font-size: 16px; margin-top: -46px;">source: https://reactjs.org/docs/hooks-reference.html</p>
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						2
+						### Hooks - Rules
+						* Only call hooks at the top level
+						* Must be called in the same order
+						* Only call hooks from react functions or custom hook function
+
+						<p style="font-size: 16px; margin-top: 36px;">source: https://reactjs.org/docs/hooks-rules.html</p>
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						3
+						### Suspense - Released API
+<pre>
+	<code data-trim data-noescape>
+import React, { Suspense, lazy } from 'react';
+	</code>
+</pre>
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						3
+						## Demos
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Coming soon
+						#### React-Cache
+<pre>
+	<code data-trim data-noescape>
+// return a promise, or async/await
+const FooResource =
+		createResource(id => fetch(`/foo/${id}`));
+
+// inside render...
+const fooResponse = FooResource.read(id);
+		// suspends if not in cache; renders if in cache
+return <div> {fooResponse} </div>;
+	</code>
+</pre>
+
+<p style="font-size: 16px; margin-top: -46px;">source: https://github.com/sw-yx/fresh-concurrent-react</p>
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Coming soon
+						#### The-Platform
+<pre>
+	<code data-trim data-noescape>
+import {
+  useDeviceMotion, useDeviceOrientation, useScript
+  useGeoPosition,
+  useNetworkStatus,
+  useMedia,
+  useStylesheet,
+  useWindowScrollPosition,
+  useWindowSize,
+  Img,
+  Script,
+  Video,
+  Audio,
+  Preload,
+  Stylesheet,
+} from 'the-platform';
+	</code>
+</pre>
+<p style="font-size: 16px; margin-top: -46px;">source: https://github.com/palmerhq/the-platform</p>
+
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Coming soon
+						#### Concurrent Mode
+<pre>
+	<code data-trim data-noescape>
+const container = document.getElementById('root');
+//today - unstable_createRoot
+const root = ReactDOM.createRoot(container);
+root.render(<App />);
+	</code>
+</pre>
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Summary
+						* Should I use this in production?
+						* Are classes dead?
+						* Is redux dead?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Questions
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Slides and Demos
+						* https://gitlab.com/Oobert/talks/tree/master/react-hooks-suspense
+
+						### Resources
+						* https://reactjs.org/docs/hooks-intro.html
+						* https://reactjs.org/docs/code-splitting.html#reactlazy
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Resources
+						* https://www.youtube.com/watch?v=dpw9EHDh2bM
+						* https://www.youtube.com/watch?v=ByBPyMBTzM0
+						* https://www.youtube.com/watch?v=SCQgE4mTnjU
+						* https://github.com/palmerhq/the-platform
+						* https://github.com/sw-yx/fresh-concurrent-react
+						* https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 					</textarea>
 				</section>
 			</div>
 		</div>
+
+
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
