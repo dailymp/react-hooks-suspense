@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const DemoOne = () => {
     const [count, setCount] = useState(0);

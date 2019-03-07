@@ -12,6 +12,11 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<style>
+			.slide-number-a {
+				zoom: 2.5;
+			}
+		</style>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -23,7 +28,7 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div style="position: absolute; left: 10px; bottom: 10px;"><a href="https://geekwithopinions.com/">geekwithopinions.com</a></div>
+			<!--<div style="position: absolute; left: 10px; bottom: 10px;"><a href="https://geekwithopinions.com/">geekwithopinions.com</a></div>-->
 			<div class="slides">
 				<section data-markdown>
 					<textarea data-template>
@@ -157,15 +162,16 @@ root.render(<App />);
 				<section data-markdown>
 					<textarea data-template>
 						### Summary
-						* Should I use this in production?
 						* Are classes dead?
 						* Is redux dead?
+						* Magic?
+						* Production ready?
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						### Questions
+						### Questions?
 					</textarea>
 				</section>
 
@@ -209,6 +215,7 @@ root.render(<App />);
 				progress: false,
 				slideNumber: true,
 				history: true,
+				controls: false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -223,7 +230,7 @@ root.render(<App />);
 
 			const setSlideProgress = (index) => {
 				setTimeout(() => {
-					let theJoke = '';
+					let theJoke = null;
 
 					if (index === 0) {
 						theJoke = '0 of 10'
@@ -241,11 +248,24 @@ root.render(<App />);
 						theJoke = 'Not found? 4 of 404'
 					}
 					if (index === 5) {
-						theJoke = 'Not found? 4 of ¯\\_(ツ)_/¯'
+						theJoke = 'Teapot? Really? 5 of 418'
+					}
+					if (index === 6) {
+						theJoke = '6 of ¯\\_(ツ)_/¯'
+					}
+					if (index === 7) {
+						theJoke = 'ugh... 7 of 623'
+					}
+					if (index === 8) {
+						theJoke = 'just stop... 8 of 1000'
+					}
+					if (index === 9) {
+						theJoke = '9 of 31337'
 					}
 
-					document.getElementsByClassName('slide-number-a')[0].innerHTML = theJoke;
-
+					if (theJoke) {
+						document.getElementsByClassName('slide-number-a')[0].innerHTML = theJoke;
+					}
 				}, 1)
 			}
 		</script>

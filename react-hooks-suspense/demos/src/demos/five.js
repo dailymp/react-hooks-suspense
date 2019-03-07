@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ReactReduxContext } from 'react-redux';
 
 const DemoFive = () => {
-    let {store} = useContext(ReactReduxContext);
+    let { store } = useContext(ReactReduxContext);
 
     const handleClick = () => {
         store.dispatch({type: "increaseCount"});

@@ -15,7 +15,7 @@ import DemoEight from "./demos/eight";
 import DemoNine from "./demos/nine";
 
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 class App extends Component {

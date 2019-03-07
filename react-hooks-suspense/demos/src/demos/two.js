@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const DemoTwo = () => {
-    const [postion, setPosition] = useState("0, 0");
+    const [position, setPosition] = useState("0, 0");
 
     useEffect(() => {
         const eventHandler = (e) => {
@@ -20,7 +20,7 @@ const DemoTwo = () => {
     return (
         <div>
             <h1>Demo 2</h1>
-            <p>{postion}</p>
+            <p>{position}</p>
         </div>
     );
 };

@@ -5,23 +5,23 @@ const DemoFour = () => {
     const [isActive, setIsActive] = useState(false);
     const intervalId = useRef(null);
 
-    useInterval(() => {
-        setCount(count+1);
-    }, isActive ? 100 : null);
+    // useInterval(() => {
+    //     setCount(count+1);
+    // }, isActive ? 100 : null);
 
     const start = () => {
-        setIsActive(true);
-        // if (!intervalId.current) {
-        //     intervalId.current = setInterval(() => setCount(count + 1), 1000);
-        // }
+        //setIsActive(true);
+        if (!intervalId.current) {
+            intervalId.current = setInterval(() => setCount(count + 1), 1000);
+        }
     };
 
     const stop = () => {
-        setIsActive(false);
-        // if (intervalId.current) {
-        //     clearInterval(intervalId.current);
-        //     intervalId.current = null;
-        // }
+        //setIsActive(false);
+        if (intervalId.current) {
+            clearInterval(intervalId.current);
+            intervalId.current = null;
+        }
     };
 
 

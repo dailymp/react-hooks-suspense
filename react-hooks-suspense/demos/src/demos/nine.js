@@ -10,7 +10,7 @@ const getData = async (dispatch, getState) => {
 const DemoSuspenseWrapper = () => {
   return (
       <div>
-          <h1>Demo 8</h1>
+          <h1>Demo 9</h1>
           <Suspense fallback={<div>Loading...</div>}>
               <DemoNine />
           </Suspense>
