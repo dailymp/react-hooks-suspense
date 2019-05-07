@@ -1,45 +1,46 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>A hike through hooks and suspense in React</title>
+	<title>A hike through hooks and suspense in React</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/blood.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/blood.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<style>
-			.slide-number-a {
-				zoom: 2.7;
-			}
-		</style>
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<!--<div style="position: absolute; left: 10px; bottom: 10px;"><a href="https://geekwithopinions.com/">geekwithopinions.com</a></div>-->
-			<div class="slides">
-				<section data-markdown>
+	<style>
+		.slide-number-a {
+			zoom: 2.7;
+		}
+	</style>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+<div class="reveal">
+	<!--<div style="position: absolute; left: 10px; bottom: 10px;"><a href="https://geekwithopinions.com/">geekwithopinions.com</a></div>-->
+	<div class="slides">
+		<section data-markdown>
 					<textarea data-template>
 						## A hike through hooks and suspense in React
 
 
-						Tony Gemoll
+						Tony Gemoll (@Oobert)
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						## Hooks?
 						* Parity
@@ -47,17 +48,17 @@
 						* More reuse
 						* Simplicity
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						## Suspense?
 						* Easier async
 						* Smarter rendering
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Hooks - Released API
 
@@ -80,9 +81,9 @@ import React,
 </pre>
 						<p style="font-size: 16px; margin-top: -46px;">source: https://reactjs.org/docs/hooks-reference.html</p>
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Hooks - Rules
 						* Only call hooks at the top level
@@ -91,9 +92,9 @@ import React,
 
 						<p style="font-size: 16px; margin-top: 36px;">source: https://reactjs.org/docs/hooks-rules.html</p>
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Suspense - Released API
 <pre>
@@ -102,15 +103,15 @@ import React, { Suspense, lazy } from 'react';
 	</code>
 </pre>
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						## Demos
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Coming soon
 						#### React-Cache
@@ -130,9 +131,9 @@ return <div> {fooResponse} </div>;
 <p style="font-size: 16px; margin-top: -46px;">source: https://github.com/sw-yx/fresh-concurrent-react</p>
 
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Coming soon
 						#### The-Platform
@@ -159,9 +160,9 @@ import {
 
 
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Coming soon
 						#### Concurrent Mode
@@ -175,9 +176,9 @@ root.render(<App />);
 </pre>
 
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Summary
 						* Are classes dead?
@@ -185,121 +186,123 @@ root.render(<App />);
 						* Magic?
 						* Production ready?
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Questions?
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Slides and Demos
-						* https://gitlab.com/Oobert/talks/tree/master/react-hooks-suspense
+						* https://gitlab.com/Oobert/talks/tree/master/react-hooks-suspense <!-- .element: style="zoom: .75" -->
 
 						### Resources
-						* https://reactjs.org/docs/hooks-intro.html
-						* https://reactjs.org/docs/code-splitting.html#reactlazy
+						* https://reactjs.org/docs/hooks-intro.html <!-- .element: style="zoom: .75" -->
+						* https://reactjs.org/docs/code-splitting.html#reactlazy <!-- .element: style="zoom: .75" -->
+						* https://overreacted.io/a-complete-guide-to-useeffect/ <!-- .element: style="zoom: .75" -->
+						* https://overreacted.io/writing-resilient-components/ <!-- .element: style="zoom: .75" -->
 					</textarea>
-				</section>
+		</section>
 
-				<section data-markdown>
+		<section data-markdown>
 					<textarea data-template>
 						### Resources
-						* https://www.youtube.com/watch?v=dpw9EHDh2bM
-						* https://www.youtube.com/watch?v=ByBPyMBTzM0
-						* https://www.youtube.com/watch?v=SCQgE4mTnjU
-						* https://github.com/palmerhq/the-platform
-						* https://github.com/sw-yx/fresh-concurrent-react
-						* https://overreacted.io/making-setinterval-declarative-with-react-hooks/
+						* https://www.youtube.com/watch?v=dpw9EHDh2bM <!-- .element: style="zoom: .75" -->
+						* https://www.youtube.com/watch?v=ByBPyMBTzM0 <!-- .element: style="zoom: .75" -->
+						* https://www.youtube.com/watch?v=SCQgE4mTnjU <!-- .element: style="zoom: .75" -->
+						* https://github.com/palmerhq/the-platform <!-- .element: style="zoom: .75" -->
+						* https://github.com/sw-yx/fresh-concurrent-react <!-- .element: style="zoom: .75" -->
+						* https://overreacted.io/making-setinterval-declarative-with-react-hooks/ <!-- .element: style="zoom: .75" -->
 					</textarea>
-				</section>
+		</section>
 
-			</div>
-		</div>
-
-
+	</div>
+</div>
 
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				progress: false,
-				slideNumber: true,
-				history: true,
-				controls: false,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
 
-			Reveal.addEventListener( 'slidechanged', function( event ) {
-				setSlideProgress(Reveal.getIndices().h);
-			} );
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-			const setSlideProgress = (index) => {
-				setTimeout(() => {
-					let theJoke = null;
+<script>
+	// More info about config & dependencies:
+	// - https://github.com/hakimel/reveal.js#configuration
+	// - https://github.com/hakimel/reveal.js#dependencies
+	Reveal.initialize({
+		progress: false,
+		slideNumber: true,
+		history: true,
+		controls: false,
+		dependencies: [
+			{ src: 'plugin/markdown/marked.js' },
+			{ src: 'plugin/markdown/markdown.js' },
+			{ src: 'plugin/notes/notes.js', async: true },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+		]
+	});
 
-					if (index === 0) {
-						theJoke = '0 of 10'
-					}
-					if (index === 1) {
-						theJoke = '1 of 11'
-					}
-					if (index === 2) {
-						theJoke = 'did that just change? 2 of 12'
-					}
-					if (index === 3) {
-						theJoke = 'wait what? 3 of 25'
-					}
-					if (index === 4) {
-						theJoke = 'Not found? 4 of 404'
-					}
-					if (index === 5) {
-						theJoke = 'Teapot? Really? 5 of 418'
-					}
+	Reveal.addEventListener( 'slidechanged', function( event ) {
+		setSlideProgress(Reveal.getIndices().h);
+	} );
 
-					if (index === 6) {
-						theJoke = 'Demo all the things!'
-					}
+	const setSlideProgress = (index) => {
+		setTimeout(() => {
+			let theJoke = null;
 
-					if (index === 7) {
-						theJoke = '7 of ¯\\_(ツ)_/¯'
-					}
-
-					if (index === 8) {
-						theJoke = 'ugh... 8 of 623'
-					}
-					if (index === 9) {
-						theJoke = 'just stop... 9 of 1000'
-					}
-					if (index === 10) {
-						theJoke = '10 of 31337'
-					}
-
-					if (index === 10) {
-						theJoke = '10 of 31337'
-					}
-
-					if (index === 11) {
-						theJoke = 'What is your favorite color?'
-					}
-
-					if (theJoke) {
-						document.getElementsByClassName('slide-number-a')[0].innerHTML = theJoke;
-					}
-				}, 1)
+			if (index === 0) {
+				theJoke = '0 of 10'
 			}
-		</script>
-	</body>
+			if (index === 1) {
+				theJoke = '1 of 11'
+			}
+			if (index === 2) {
+				theJoke = 'did that just change? 2 of 12'
+			}
+			if (index === 3) {
+				theJoke = 'wait what? 3 of 25'
+			}
+			if (index === 4) {
+				theJoke = 'Not found? 4 of 404'
+			}
+			if (index === 5) {
+				theJoke = 'Teapot? Really? 5 of 418'
+			}
+
+			if (index === 6) {
+				theJoke = 'Demo all the things!'
+			}
+
+			if (index === 7) {
+				theJoke = '7 of ¯\\_(ツ)_/¯'
+			}
+
+			if (index === 8) {
+				theJoke = 'ugh... 8 of 623'
+			}
+			if (index === 9) {
+				theJoke = 'just stop... 9 of 1000'
+			}
+			if (index === 10) {
+				theJoke = '10 of 31337'
+			}
+
+			if (index === 10) {
+				theJoke = '10 of 31337'
+			}
+
+			if (index === 11) {
+				theJoke = 'What is your favorite color?'
+			}
+
+			if (theJoke) {
+				document.getElementsByClassName('slide-number-a')[0].innerHTML = theJoke;
+			}
+		}, 1)
+	}
+</script>
+</body>
 </html>

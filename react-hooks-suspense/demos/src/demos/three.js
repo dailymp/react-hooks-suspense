@@ -6,7 +6,7 @@ const DemoThree = () => {
     const focusElement = useRef(null);
     useEffect(() => {
         focusElement.current.focus();
-    }, []);
+    });
 
     return (
         <div>

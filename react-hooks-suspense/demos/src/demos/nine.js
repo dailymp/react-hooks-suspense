@@ -21,6 +21,7 @@ const DemoSuspenseWrapper = () => {
 export default DemoSuspenseWrapper;
 
 
+
 const DemoNineComponent = ({contrivedString}) => {
     useAsyncAction(getData);
 
