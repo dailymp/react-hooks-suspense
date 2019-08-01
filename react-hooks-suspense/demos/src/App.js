@@ -14,6 +14,7 @@ import DemoSeven from "./demos/seven";
 import DemoEight from "./demos/eight";
 import DemoNine from "./demos/nine";
 
+import LiveSearch from "./LiveSearchClass/stepFour";
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -46,6 +47,7 @@ class App extends Component {
                   <DemoNine path="/nine" />
                 </Router>
             </div>
+            <LiveSearch />
         </Provider>
     );
   }
