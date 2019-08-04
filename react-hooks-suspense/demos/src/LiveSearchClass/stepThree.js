@@ -47,6 +47,7 @@ const StepThree = () => {
             <h1>Step 3</h1>
             <div>
                 <input
+                    placeholder="Dad Jokes Search"
                     ref={focusElement}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     value={searchTerm} type='text' />

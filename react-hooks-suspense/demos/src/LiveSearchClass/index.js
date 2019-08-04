@@ -21,7 +21,7 @@ export default class LiveSearch extends Component {
 
         this.setState({
             controller: controller
-        })
+        });
         let results = await fetch(`https://icanhazdadjoke.com/search?term=${searchTerm}`, {
             headers:{
                 'accept': 'application/json'
@@ -65,8 +65,10 @@ export default class LiveSearch extends Component {
 
         return (
             <div>
+                <h1>Start</h1>
                 <div>
                     <input
+                        placeholder="Dad Jokes Search"
                         ref={this.inputRef}
                         onChange={this.onSearchTermChanged} value={this.state.searchTerm} type='text' />
                 </div>

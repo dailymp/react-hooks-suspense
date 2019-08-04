@@ -8,10 +8,11 @@ const StepOne = () => {
             <h1>Step 1</h1>
             <div>
                 <input
+                    placeholder="Dad Jokes Search"
                     onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm} type='text' />
             </div>
             <ul>
-                
+
             </ul>
         </div>
     );
